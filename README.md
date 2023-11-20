@@ -1,1 +1,1 @@
-# Metaverse Dance Commuity
+# Metaverse Dance Community
