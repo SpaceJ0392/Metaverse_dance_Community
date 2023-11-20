@@ -1,0 +1,42 @@
+﻿@page "/Vogue"
+@using WebServer.Data.Models
+@using WebServer.Data.Services
+
+@inject BoardService BoardService
+@inject NavigationManager NavManager
+
+
+<h3 class="border-bottom border-dark pb-3"><em>Vogue</em></h3>
+
+<br />
+<p>
+    보깅(voguing) 또는 보그(vogue)는 1960년대 할렘의 볼룸 신에서 발전하여 1980년대 후반에 시작된 <strong>고도로 양식화된 현대적인 하우스 댄스</strong>이다.<br />
+    보깅은 마돈나의 노래와 영상 'Vogue'와 1990년 다큐멘터리 "파리는 불타고 있다"(1991년 선댄스 영화제 심사위원 대상 수상)에 소개되면서 주류에 알려지게 되었다.<br />
+    현대적인 형태에서 이 춤은 스타일적으로나 인구통계학적으로나 계속해서 진화하는 세계적 현상이 되었다.
+</p>
+<br />
+<div style="text-align:center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Etko5V5hulA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br />
+<br />
+
+<h5 class="border-bottom border-dark pb-3">안무가 소개</h5>
+<div id="accordion">
+    @foreach (var npc in _npcs)
+    {
+        <TeacherInfo _Npc="npc"></TeacherInfo>
+        <p>
+            <h6>* @npc.NpcName 선생님에 대한 이용자들의 평가를 보시려면 <a href="/Teacher/@npc.NpcId">더보기</a> 를 눌러 주세요</h6>
+        </p>
+    }
+</div>
+
+@code {
+    List<Npc> _npcs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _npcs = await BoardService.GetNpcsByMajorAsync("Vogue");
+    }
+}

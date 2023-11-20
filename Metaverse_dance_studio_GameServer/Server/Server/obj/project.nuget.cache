@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QUrfhDDIX5FDueA+g+3Uo+C9o1XzdHeiVVHYBGysYXVLrRxDRoVQj6DoZlxH2GaWkpUF7sERLam7Lk6TqAEx6g==",
+  "success": true,
+  "projectFilePath": "C:\\project\\c#\\MetaverseDanceStudioProject\\Meta_Studio_ver.Fin4\\Server\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\82109\\.nuget\\packages\\google.protobuf\\3.12.3\\google.protobuf.3.12.3.nupkg.sha512",
+    "C:\\Users\\82109\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\82109\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

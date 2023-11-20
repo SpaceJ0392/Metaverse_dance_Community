@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/Blazority" Path="C:\Users\82109\.nuget\packages\blazority\1.0.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Smart.Blazor" Path="C:\Users\82109\.nuget\packages\smart.blazor\14.2.18\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor.Core" Path="C:\Users\82109\.nuget\packages\syncfusion.blazor.core\20.2.0.49\build\..\staticwebassets\" />
+</StaticWebAssets>

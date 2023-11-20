@@ -1,0 +1,42 @@
+﻿@page "/HipHop"
+@using WebServer.Data.Models
+@using WebServer.Data.Services
+
+@inject BoardService BoardService
+@inject NavigationManager NavManager
+
+<h3 class="border-bottom border-dark pb-3"><em>HipHop</em></h3>
+
+<br />
+<p>
+    춤의 한 갈래로서의 힙합은 <strong>'스트릿댄스(Street Dance, 길거리 문화를 받은 춤)'</strong>를 일컫는 말로 사용된다.<br />
+    그 하위 장르로는 팝핑, 비보잉, 크럼프, 왁킹, 락킹, 뉴스타일 힙합, 하우스, 걸스 힙합 등이 있다.<br />
+    허나 보통은 그렇게 쓰이지는 않고 대부분 춤에서 '힙합'이라고 말하면 비보잉이나 팝핀으로 이해한다.
+</p>
+<br />
+<div style="text-align:center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hvu6SSY20Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br />
+<br />
+
+<h5 class="border-bottom border-dark pb-3">안무가 소개</h5>
+<div id="accordion">
+    @foreach (var npc in _npcs)
+    {
+        <TeacherInfo _Npc="npc"></TeacherInfo>
+        <p>
+            <h6>* @npc.NpcName 선생님에 대한 이용자들의 평가를 보시려면 <a href="/Teacher/@npc.NpcId">더보기</a> 를 눌러 주세요</h6>
+        </p>
+    }
+</div>
+
+
+@code {
+    List<Npc> _npcs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _npcs = await BoardService.GetNpcsByMajorAsync("HipHop");
+    }
+}

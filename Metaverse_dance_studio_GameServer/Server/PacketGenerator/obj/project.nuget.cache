@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "pCLBs9MXWeoN5RaCcxXY2hOFwjgL5BOSwyIRab9Lpz84XGVXv4leteR4RjGjoRU+gV7ntGWy0StbBHudn2pbTQ==",
+  "success": true,
+  "projectFilePath": "C:\\project\\c#\\MetaverseDanceStudioProject\\Meta_Studio_ver.Fin4\\Server\\PacketGenerator\\PacketGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\82109\\.nuget\\packages\\google.protobuf\\3.12.3\\google.protobuf.3.12.3.nupkg.sha512",
+    "C:\\Users\\82109\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\82109\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
+    "C:\\Users\\82109\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

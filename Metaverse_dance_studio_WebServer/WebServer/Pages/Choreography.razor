@@ -1,0 +1,43 @@
+﻿@page "/Choreography"
+@using WebServer.Data.Models
+@using WebServer.Data.Services
+
+@inject BoardService BoardService
+@inject NavigationManager NavManager
+
+<h3 class="border-bottom border-dark pb-3"><em>Choreography</em></h3>
+
+<br />
+<p>
+    <strong>안무(按舞, 영어: choreography)는 일련의 움직임을 디자인하는 예술</strong>로, 이 움직임 안에서 운동이나 형태가 규정된다. 안무를 전문으로 하는 사람을 안무가나 무용가라고 부른다.<br />
+    다만, 현대에 이르러서 코레오그래피는 코레오그래퍼가 좋아하는 음악, 요즘 핫한 음악에 영감을 얻어 그 음악에 맞는 새로운 안무를 짜는 걸 의미하기도 한다.<br />
+    그래서 안무가의 <strong>개성에 따라 장르, 분위기, 포인트 안무 등이 달라질 수 있다는 특징</strong>을 가진다.<br />
+</p>
+<br />
+<div style="text-align:center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hvu6SSY20Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br />
+<br />
+
+<h5 class="border-bottom border-dark pb-3">안무가 소개</h5>
+<div id="accordion">
+    @foreach (var npc in _npcs)
+    {
+        <TeacherInfo _Npc="npc"></TeacherInfo>
+        <p>
+            <h6>* @npc.NpcName 선생님에 대한 이용자들의 평가를 보시려면 <a href="/Teacher/@npc.NpcId">더보기</a> 를 눌러 주세요</h6>
+        </p>
+    }
+</div>
+
+
+@code {
+    List<Npc> _npcs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _npcs = await BoardService.GetNpcsByMajorAsync("Choreography");
+    }
+
+}
